@@ -155,6 +155,8 @@ st.markdown("""
 
 st.write("More details on the next pages...")
 
+st.write("Live App Link:")
+st.write("https://your-app-name.streamlit.app")
 
                                                        
 
