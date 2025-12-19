@@ -3,6 +3,8 @@ import joblib
 import numpy as np
 import pickle
 import pandas as pd
+import matplotlib.pyplot as plt
+import inflect
 
 # Load model
 model = joblib.load("model.pkl")
@@ -54,7 +56,7 @@ if predictbutton:
     prediction = model.predict(x_array)[0]
     
     # Show prediction result
-    import inflect
+    
     p=inflect.engine()
     price_in_world=p.number_to_words(int(prediction)).upper()
     
@@ -110,7 +112,7 @@ st.divider()
 st.write("🔹 This comparison helps you understand price variations across cities.")
 
  
-import matplotlib.pyplot as plt
+
 st.subheader("📊 Price Comparison")
 data = {
     "City": ["Delhi", "Bangalore", "Mumbai", "Hyderabad"],
